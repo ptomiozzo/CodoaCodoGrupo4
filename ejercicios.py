@@ -1,4 +1,7 @@
 
+import abc
+
+
 def espaciosguiones(cadena):
     salida = cadena.replace(" ","-")
     return (salida)
@@ -48,6 +51,28 @@ def triangulonumeros(numero):
         print(salida)
         i += 1
 
+def contarletras(cadena):
+    primero = ["0",0]
+    segundo = primero
+    tercero = primero
+
+    minusculas = cadena.lower()
+    for i in range (ord("a"),ord("z")+1):
+        x = minusculas.count(chr(i))
+        if x > primero[1]:
+            tercero = segundo
+            segundo = primero
+            primero = [chr(i),x] 
+        elif x > segundo[1]:
+            tercero = segundo
+            segundo = [chr(i),x]
+        elif x > tercero [1]:
+            tercero = [chr(i),x]
+
+    print (primero[0],primero[1])
+    print (segundo[0],segundo[1])
+    print (tercero[0],tercero[1])
+
 
 #print(espaciosguiones("Hola Mundo como estamos"))
 
@@ -65,3 +90,5 @@ def triangulonumeros(numero):
 #print(segundo(lista))
 
 #triangulonumeros(9)
+
+contarletras("Codo a Codo")
