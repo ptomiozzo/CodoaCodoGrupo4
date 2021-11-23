@@ -91,4 +91,4 @@ def contarletras(cadena):
 
 #triangulonumeros(9)
 
-contarletras("Codo a Codo")
+contarletras("Pedro Henry Laura Pablo")
